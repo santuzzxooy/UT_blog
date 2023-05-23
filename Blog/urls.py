@@ -19,6 +19,6 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('', views.index.as_view(), name='index'),
     path('about', views.about, name='about'),
 ]
