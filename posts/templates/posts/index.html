@@ -24,14 +24,14 @@
         <ul class="navbar-nav">
           {% if not 'about' in request.path %}
           <li class="m-2 nav-item">
-            <a href="{% url 'about' %}">
+            <a href="#">
               <button type="button" class="btn btn-secondary">About us</button>
             </a>
           </li>
           {% endif %}
           {% if 'about' in request.path %}
           <li class="m-2 nav-item">
-            <a href="{% url 'home' %}">
+            <a href="#">
               <button type="button" class="btn btn-secondary">Home</button>
             </a>
           </li>
