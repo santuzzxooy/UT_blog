@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from posts.models import Post
-# from django.views.generic import ListView
+from django.views.generic import ListView
 # Create your views here.
 
 def index(request):
