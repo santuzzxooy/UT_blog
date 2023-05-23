@@ -5,4 +5,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def prueba(request):
-    return HttpResponse("Esto es una prueba")
+    return render(request,'posts/base.html')
