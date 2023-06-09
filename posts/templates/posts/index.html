@@ -44,6 +44,7 @@
   </nav>
     <!--EndHeader-->
 
+    
 
     {% for post in object_list %}
     <div class="mt-4 mb-0 ms-5 me-5 card">
@@ -70,20 +71,19 @@
         <div class="row">
           {% if post.simage %}
           <div class="m-2 col-sm-4 mb-3 mb-sm-0">
-                <img src="" class="card-img-top" alt="...">
+                <img src="{{post.simage.url}}" class="card-img-top" alt="...">
           </div>
           {% endif %}
 
           {% if post.timage %}
           <div class="col-sm-4">
-                <img src="" class="card-img-top" alt="...">
+                <img src="{{post.timage.url}}" class="card-img-top" alt="...">
           </div>
           {% endif %}
         </div>
       </div>
     </div>
     {% endfor %}
-    
 
   <!-- endFooter -->
   <footer class="bg-light text-center text-lg-start">
