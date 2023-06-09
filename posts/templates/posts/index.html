@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +45,8 @@
   </nav>
     <!--EndHeader-->
 
-    
 
+{% block content %}
     {% for post in object_list %}
     <div class="mt-4 mb-0 ms-5 me-5 card">
         <div class="card-body">
@@ -84,6 +85,7 @@
       </div>
     </div>
     {% endfor %}
+{% endblock content %}
 
   <!-- endFooter -->
   <footer class="bg-light text-center text-lg-start">
