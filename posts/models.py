@@ -9,7 +9,7 @@ class Topics(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=70)
-    sub = models.CharField(max_length=200)
+    year = models.CharField(max_length=200)
     topic = models.ForeignKey(Topics, on_delete=models.CASCADE, null=True)
     first = models.TextField(blank=False)
     second = models.TextField(blank=True)
