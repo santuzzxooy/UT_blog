@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from posts.models import Post, Topics
 from django.views.generic import ListView
 # Create your views here.
@@ -16,3 +16,10 @@ class topic(ListView):
 
 def about(request):
     return render(request,'posts/about.html')
+
+
+def topic_post(request, slug):
+    if (Topics.objects.filter(slug=slug)):
+        post = Post.objects.filter(topic__slug=slug)
+        context={'post':post}
+        return render(request, 'posts/topic_post.html', context)

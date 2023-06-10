@@ -1,0 +1,50 @@
+{% extends "posts/base.html" %}
+
+{% block content %}
+
+<div class="row m-2 row-cols-1 row-cols-md-2 g-4"> 
+{% for post in post %}
+<div class="col">
+  <div class="card">
+    <h2 class="mx-auto p-2">{{ post.title }} - {{ post.year }}</h2>
+    <h3 class="mx-auto p-2">({{ post.sub }})</h3>
+    <img src="{{post.image.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{ post.first }}</p>
+      {% if post.second %}
+      <p class="card-text">{{ post.second }}</p>
+      {% endif %}
+      {% if post.third %}
+      <p class="card-text">{{ post.third }}</p>
+      {% endif %}
+
+      <p>Post date: {{post.date}}</p>
+      Bibliography: <a href="{{post.url}}">{{post.bibliography}}</a>
+
+    </div>
+    <div class="m-2">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#{{post.pk}}" aria-expanded="false" aria-controls="collapseExample">
+        {% if post.timage %}Show reference pictures{% else %}Show reference picture{% endif %}
+        </button>
+        <div class="collapse" id="{{post.pk}}">
+        <div class="row">
+        {% if post.simage %}
+        <div class="m-2 col-sm-4 mb-3 mb-sm-0">
+              <img src="{{post.simage.url}}" class="card-img-top" alt="...">
+        </div>
+        {% endif %}
+
+        {% if post.timage %}
+        <div class="col-sm-4">
+              <img src="{{post.timage.url}}" class="card-img-top" alt="...">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
