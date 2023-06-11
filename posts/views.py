@@ -18,8 +18,8 @@ def about(request):
     return render(request,'posts/about.html')
 
 
-def topic_post(request, slug):
-    if (Topics.objects.filter(slug=slug)):
-        post = Post.objects.filter(topic__slug=slug)
-        context={'post':post}
-        return render(request, 'posts/topic_post.html', context)
+# def topic_post(request, slug):
+#     if (Topics.objects.filter(slug=slug)):
+#         post = Post.objects.filter(topic__slug=slug)
+#         context={'post':post}
+#         return render(request, 'posts/topic_post.html', context)
