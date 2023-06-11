@@ -16,3 +16,10 @@ class topic(ListView):
 
 def about(request):
     return render(request,'posts/about.html')
+
+
+def topic_post(request, title):
+    if (Topics.objects.filter(title=title)):
+        post = Post.objects.filter(topic__title=title)
+        context={'post':post}
+        return render(request, 'posts/topic_post.html', context)

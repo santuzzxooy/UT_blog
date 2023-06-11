@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.index.as_view(), name='index'),
     path('topic', views.topic.as_view(), name='topic'),
     path('about', views.about, name='about'),
+    path('topic/<str:title>', views.topic_post, name='topic_post'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
