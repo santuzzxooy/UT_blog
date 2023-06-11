@@ -10,12 +10,12 @@
           <h3 class="mx-auto p-2">({{ post.sub }})</h3>
           <img src="{{post.image.url}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{ post.first }}</p>
+            <p class="justify-content-around">{{ post.first }}</p>
             {% if post.second %}
-            <p class="card-text">{{ post.second }}</p>
+            <p class="justify-content-around">{{ post.second }}</p>
             {% endif %}
             {% if post.third %}
-            <p class="card-text">{{ post.third }}</p>
+            <p class="justify-content-around">{{ post.third }}</p>
             {% endif %}
 
             <p>Post date: {{post.date}}</p>
