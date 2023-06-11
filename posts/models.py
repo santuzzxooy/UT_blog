@@ -23,6 +23,7 @@ class Post(models.Model):
     timage = models.ImageField(null=True, blank=True, upload_to='images/')
     date = models.DateField(auto_now_add=False)
     bibliography = models.CharField(max_length=250)
+    url = models.CharField(null=True, max_length=200)
 
     def __str__(self):
         return self.title
