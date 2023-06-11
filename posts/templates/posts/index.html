@@ -17,10 +17,6 @@
             {% if post.third %}
             <p class="card-text">{{ post.third }}</p>
             {% endif %}
-
-            <p>Post date: {{post.date}}</p>
-            Bibliography: <a href="{{post.url}}">{{post.bibliography}}</a>
-
           </div>
           <div class="m-2">
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#{{post.pk}}" aria-expanded="false" aria-controls="collapseExample">
